@@ -45,18 +45,18 @@ export default function HowItWorksSection() {
               key={step.number}
               className="bg-base-100 border border-base-300 rounded p-6"
             >
-              <p className="font-mono text-4xl font-bold text-primary/15 mb-5 leading-none">
+              <p className="font-mono text-4xl font-bold text-primary/40 mb-5 leading-none">
                 {step.number}
               </p>
               <h3 className="font-bold text-lg mb-2">{step.title}</h3>
-              <p className="text-sm text-base-content/40 leading-relaxed mb-4">
+              <p className="text-sm text-base-content/65 leading-relaxed mb-4">
                 {step.description}
               </p>
               <div className="flex flex-wrap gap-1.5">
                 {step.channels.map((ch) => (
                   <span
                     key={ch}
-                    className="text-xs font-mono text-base-content/30 border border-base-300 rounded px-2 py-0.5"
+                    className="text-xs font-mono text-base-content/60 border border-base-300 rounded px-2 py-0.5"
                   >
                     {ch}
                   </span>

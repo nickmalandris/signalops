@@ -50,7 +50,7 @@ export default function ProblemSection() {
               key={platform.name}
               className="flex items-center gap-3 bg-base-200 border border-base-300 rounded px-4 py-3"
             >
-              <span className="text-base-content/20 font-mono">
+              <span className="text-base-content/50 font-mono">
                 {platform.symbol}
               </span>
               <span className="text-sm text-base-content/50 font-mono">
@@ -70,7 +70,7 @@ export default function ProblemSection() {
               <h3 className="font-bold text-base-content mb-2 text-sm">
                 {point.title}
               </h3>
-              <p className="text-sm text-base-content/40 leading-relaxed">
+              <p className="text-sm text-base-content/65 leading-relaxed">
                 {point.body}
               </p>
             </div>

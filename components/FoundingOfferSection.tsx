@@ -47,7 +47,7 @@ export default function FoundingOfferSection() {
           >
             Apply for Founding Access
           </a>
-          <p className="text-xs text-base-content/25 font-mono mt-4">
+          <p className="text-xs text-base-content/55 font-mono mt-4">
             20 spots · No credit card required
           </p>
         </div>

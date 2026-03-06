@@ -75,7 +75,7 @@ function AlertCard({ alert }: { alert: AlertData }) {
           <span className={`inline-block w-1.5 h-1.5 rounded-full ${s.dot}`} />
           {alert.title}
         </span>
-        <span className="text-xs text-base-content/25 font-mono">
+        <span className="text-xs text-base-content/55 font-mono">
           {alert.time}
         </span>
       </div>
@@ -94,10 +94,10 @@ function AlertCard({ alert }: { alert: AlertData }) {
 
       {/* Action */}
       <div className="flex gap-2 items-start pt-1 border-t border-base-300">
-        <span className="text-base-content/30 font-bold text-sm mt-0.5 shrink-0">
+        <span className="text-base-content/60 font-bold text-sm mt-0.5 shrink-0">
           →
         </span>
-        <p className="text-xs text-base-content/40 leading-relaxed">
+        <p className="text-xs text-base-content/65 leading-relaxed">
           {alert.action}
         </p>
       </div>
@@ -133,7 +133,7 @@ export default function AlertsSection() {
         </div>
 
         {/* Footer note */}
-        <p className="text-center text-xs text-base-content/25 font-mono mt-10">
+        <p className="text-center text-xs text-base-content/55 font-mono mt-10">
           Every alert contains: what happened · why it matters · what to do next
         </p>
       </div>

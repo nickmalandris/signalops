@@ -52,7 +52,7 @@ export default function FeaturesSection() {
                 {feature.symbol}
               </div>
               <h3 className="font-bold text-lg mb-2">{feature.title}</h3>
-              <p className="text-sm text-base-content/40 leading-relaxed">
+              <p className="text-sm text-base-content/65 leading-relaxed">
                 {feature.description}
               </p>
             </div>

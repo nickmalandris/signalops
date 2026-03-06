@@ -19,14 +19,14 @@ export default function SolutionSection() {
 
         {/* Core principle card */}
         <div className="bg-base-100 border border-primary/20 rounded p-8 md:p-12 max-w-xl mx-auto">
-          <p className="font-mono text-xs text-base-content/30 uppercase tracking-widest mb-6">
+          <p className="font-mono text-xs text-base-content/60 uppercase tracking-widest mb-6">
             Core Principle
           </p>
           <p className="text-2xl md:text-3xl font-bold text-base-content leading-snug mb-4">
             Only send alerts that are{" "}
             <span className="text-primary">worth acting on.</span>
           </p>
-          <p className="text-sm text-base-content/40 leading-relaxed">
+          <p className="text-sm text-base-content/65 leading-relaxed">
             The system avoids alert fatigue by focusing exclusively on
             high-signal events. You receive fewer alerts — but every single one
             matters and comes with a clear next step.

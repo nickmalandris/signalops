@@ -36,7 +36,7 @@ export default function Hero() {
           >
             Join the Founding Beta
           </a>
-          <p className="text-sm text-base-content/30 font-mono">
+          <p className="text-sm text-base-content/60 font-mono">
             We&apos;re onboarding{" "}
             <span className="text-primary">20 Shopify founders</span> to shape
             the first generation of revenue alerts.
@@ -53,7 +53,7 @@ export default function Hero() {
                 <span className="inline-block w-1.5 h-1.5 rounded-full bg-success animate-pulse" />
                 Revenue Opportunity
               </span>
-              <span className="text-xs text-base-content/25 font-mono">
+              <span className="text-xs text-base-content/55 font-mono">
                 2m ago
               </span>
             </div>
@@ -70,16 +70,16 @@ export default function Hero() {
               Current ROAS: 4.3x
             </div>
             <div className="flex gap-2 items-start pt-1 border-t border-base-300">
-              <span className="text-base-content/40 font-bold text-sm mt-0.5">
+              <span className="text-base-content/65 font-bold text-sm mt-0.5">
                 →
               </span>
-              <p className="text-xs text-base-content/40 leading-relaxed">
+              <p className="text-xs text-base-content/65 leading-relaxed">
                 Consider increasing budget by 20% while performance is strong.
               </p>
             </div>
           </div>
         </div>
-        <p className="text-center text-xs text-base-content/20 font-mono mt-4">
+        <p className="text-center text-xs text-base-content/55 font-mono mt-4">
           This is what a SignalOps alert looks like.
         </p>
       </div>
