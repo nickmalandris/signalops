@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* SignalOps custom theme */
+[data-theme="signalops"] {
+  color-scheme: dark;
+
+  --color-base-100: oklch(7% 0 0);
+  --color-base-200: oklch(10% 0 0);
+  --color-base-300: oklch(15% 0 0);
+  --color-base-content: oklch(98% 0 0);
+
+  --color-primary: oklch(87% 0.29 138);
+  --color-primary-content: oklch(5% 0 0);
+
+  --color-secondary: oklch(65% 0.22 50);
+  --color-secondary-content: oklch(98% 0 0);
+
+  --color-accent: oklch(87% 0.29 138);
+  --color-accent-content: oklch(5% 0 0);
+
+  --color-neutral: oklch(16% 0 0);
+  --color-neutral-content: oklch(87% 0 0);
+
+  --color-info: oklch(74% 0.16 232);
+  --color-info-content: oklch(10% 0 0);
+
+  --color-success: oklch(80% 0.2 138);
+  --color-success-content: oklch(10% 0 0);
+
+  --color-warning: oklch(82% 0.19 84);
+  --color-warning-content: oklch(41% 0.1 46);
+
+  --color-error: oklch(71% 0.19 13);
+  --color-error-content: oklch(98% 0 0);
+
+  --radius-selector: 0.25rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.375rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+/* Custom utility for neon glow on primary elements */
+@theme {
+  --color-neon: #39ff14;
+}
+
+@keyframes slide-in-right {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
