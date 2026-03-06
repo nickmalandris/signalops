@@ -23,6 +23,7 @@ export default function RootLayout({
     <html lang="en" data-theme="signalops">
       <body className="bg-base-100 text-base-content antialiased">
         {children}
+        <Analytics />
       </body>
     </html>
   );
