@@ -246,7 +246,7 @@ export default function ApplicationForm() {
               <p className="font-mono text-xs text-primary uppercase tracking-widest">
                 Apply for Founding Access
               </p>
-              <p className="font-mono text-xs text-base-content/30">
+              <p className="font-mono text-xs text-base-content/60">
                 {currentScreenIndex + 1} / {TOTAL_SCREENS}
               </p>
             </div>
@@ -274,7 +274,7 @@ export default function ApplicationForm() {
                   {q.label}
                 </h2>
                 {!q.required && (
-                  <p className="text-sm text-base-content/30 font-mono">
+                  <p className="text-sm text-base-content/60 font-mono">
                     Optional — skip if you like
                   </p>
                 )}
@@ -342,7 +342,7 @@ export default function ApplicationForm() {
                   <button
                     type="button"
                     onClick={goBack}
-                    className="text-xs text-base-content/30 hover:text-base-content/60 font-mono text-center transition-colors"
+                    className="text-xs text-base-content/60 hover:text-base-content/80 font-mono text-center transition-colors"
                   >
                     ← Back
                   </button>
@@ -367,7 +367,7 @@ export default function ApplicationForm() {
                 <div className="flex flex-col gap-1.5">
                   <label
                     htmlFor="name"
-                    className="text-xs font-mono text-base-content/40 uppercase tracking-wider"
+                    className="text-xs font-mono text-base-content/65 uppercase tracking-wider"
                   >
                     Full Name
                   </label>
@@ -386,7 +386,7 @@ export default function ApplicationForm() {
                 <div className="flex flex-col gap-1.5">
                   <label
                     htmlFor="email"
-                    className="text-xs font-mono text-base-content/40 uppercase tracking-wider"
+                    className="text-xs font-mono text-base-content/65 uppercase tracking-wider"
                   >
                     Work Email
                   </label>
@@ -405,7 +405,7 @@ export default function ApplicationForm() {
                 <div className="flex flex-col gap-1.5">
                   <label
                     htmlFor="storeUrl"
-                    className="text-xs font-mono text-base-content/40 uppercase tracking-wider"
+                    className="text-xs font-mono text-base-content/65 uppercase tracking-wider"
                   >
                     Shopify Store URL
                   </label>
@@ -424,11 +424,11 @@ export default function ApplicationForm() {
                 <div className="flex flex-col gap-1.5">
                   <label
                     htmlFor="question"
-                    className="text-xs font-mono text-base-content/40 uppercase tracking-wider"
+                    className="text-xs font-mono text-base-content/65 uppercase tracking-wider"
                   >
                     If you could hire a data analyst tomorrow, what&apos;s the
                     first thing you&apos;d ask?{" "}
-                    <span className="text-base-content/25">(optional)</span>
+                    <span className="text-base-content/55">(optional)</span>
                   </label>
                   <textarea
                     id="question"
@@ -461,12 +461,12 @@ export default function ApplicationForm() {
                 <button
                   type="button"
                   onClick={goBack}
-                  className="text-xs text-base-content/30 hover:text-base-content/60 font-mono text-center transition-colors"
+                  className="text-xs text-base-content/60 hover:text-base-content/80 font-mono text-center transition-colors"
                 >
                   ← Back
                 </button>
 
-                <p className="text-center text-xs text-base-content/25 font-mono">
+                <p className="text-center text-xs text-base-content/55 font-mono">
                   No credit card · 20 spots only · Personal onboarding
                 </p>
               </form>
@@ -487,7 +487,7 @@ export default function ApplicationForm() {
                 review applications personally and will reach out within a few
                 days.
               </p>
-              <p className="text-base-content/30 text-xs font-mono">
+              <p className="text-base-content/60 text-xs font-mono">
                 In the meantime — no dashboards, just signals.
               </p>
             </div>

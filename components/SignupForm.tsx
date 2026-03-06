@@ -72,7 +72,7 @@ export default function SignupForm() {
           <div className="flex flex-col gap-1.5">
             <label
               htmlFor="name"
-              className="text-xs font-mono text-base-content/40 uppercase tracking-wider"
+              className="text-xs font-mono text-base-content/65 uppercase tracking-wider"
             >
               Full Name
             </label>
@@ -93,7 +93,7 @@ export default function SignupForm() {
           <div className="flex flex-col gap-1.5">
             <label
               htmlFor="email"
-              className="text-xs font-mono text-base-content/40 uppercase tracking-wider"
+              className="text-xs font-mono text-base-content/65 uppercase tracking-wider"
             >
               Work Email
             </label>
@@ -114,7 +114,7 @@ export default function SignupForm() {
           <div className="flex flex-col gap-1.5">
             <label
               htmlFor="storeUrl"
-              className="text-xs font-mono text-base-content/40 uppercase tracking-wider"
+              className="text-xs font-mono text-base-content/65 uppercase tracking-wider"
             >
               Shopify Store URL
             </label>
@@ -154,7 +154,7 @@ export default function SignupForm() {
             )}
           </button>
 
-          <p className="text-center text-xs text-base-content/25 font-mono">
+          <p className="text-center text-xs text-base-content/55 font-mono">
             No credit card · 20 spots only · Personal onboarding
           </p>
         </form>

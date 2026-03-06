@@ -45,7 +45,7 @@ export default function HowItWorksSection() {
               key={step.number}
               className="bg-base-100 border border-base-300 rounded p-6"
             >
-              <p className="font-mono text-4xl font-bold text-primary/40 mb-5 leading-none">
+              <p className="font-mono text-4xl font-bold text-primary/65 mb-5 leading-none">
                 {step.number}
               </p>
               <h3 className="font-bold text-lg mb-2">{step.title}</h3>
