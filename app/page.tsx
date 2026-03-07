@@ -16,7 +16,6 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      <ApplicationForm />
       <ComparisonSection />
       <ProblemSection />
       <SolutionSection />
@@ -25,6 +24,7 @@ export default function Home() {
       <FeaturesSection />
       <FounderLetterSection />
       <FoundingOfferSection />
+      <ApplicationForm />
       <Footer />
     </main>
   );

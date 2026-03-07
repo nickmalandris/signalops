@@ -1,4 +1,27 @@
+"use client";
+
+import { useState } from "react";
+
 export default function Hero() {
+  const [email, setEmail] = useState("");
+
+  const handleQuickStart = (e: React.FormEvent) => {
+    e.preventDefault();
+    // In a real app, we might use a global state or URL param.
+    // For now, we'll just scroll to the form. 
+    // If we wanted to pre-fill, we'd need a bit more plumbing.
+    document.getElementById("apply")?.scrollIntoView({ behavior: "smooth" });
+    
+    // We can also try to find the email input in the form and set it
+    const formEmailInput = document.querySelector('#apply input[type="email"]') as HTMLInputElement;
+    if (formEmailInput) {
+      formEmailInput.value = email;
+      // Trigger a change event so React picks it up
+      const event = new Event('input', { bubbles: true });
+      formEmailInput.dispatchEvent(event);
+    }
+  };
+
   return (
     <section className="flex flex-col items-center justify-center text-center px-4 pt-28 pb-20">
       <div className="max-w-3xl mx-auto">
@@ -24,21 +47,29 @@ export default function Hero() {
           SignalOps is an AI Revenue Analyst that monitors your Shopify store
           and ad performance 24/7 — correlating data across platforms and
           sending you a single, actionable message when it matters.
-          No logins. No charts. Just context and a clear next step.
         </p>
 
         {/* CTA */}
-        <div className="flex flex-col items-center gap-3 mb-20">
-          <a
-            href="#apply"
-            className="btn btn-primary btn-lg font-mono px-10"
-          >
-            Apply for Founding Access
-          </a>
-          <p className="text-xs text-base-content/60 font-mono max-w-sm leading-relaxed">
-            Currently accepting Shopify stores with{" "}
-            <span className="text-base-content">$20k+ monthly revenue</span> to
-            ensure our signals deliver measurable ROI.
+        <div className="flex flex-col items-center gap-4 mb-20 w-full max-w-md mx-auto">
+          <form onSubmit={handleQuickStart} className="flex flex-col sm:flex-row gap-2 w-full">
+            <input 
+              type="email" 
+              placeholder="Enter your work email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="input input-bordered flex-grow bg-base-200 focus:border-primary focus:outline-none"
+            />
+            <button
+              type="submit"
+              className="btn btn-primary font-mono px-8"
+            >
+              Apply Now
+            </button>
+          </form>
+          <p className="text-xs text-base-content/60 font-mono leading-relaxed">
+            Accepting stores with{" "}
+            <span className="text-base-content">$20k+ monthly revenue</span>
           </p>
         </div>
       </div>
@@ -98,12 +129,6 @@ export default function Hero() {
                   <p className="text-base-content/60 mb-0.5">Page Speed</p>
                   <p className="text-warning font-bold">4.2s</p>
                 </div>
-              </div>
-
-              {/* Root cause */}
-              <div className="bg-base-100 rounded px-3 py-2.5 text-xs font-mono text-base-content/70 leading-relaxed">
-                Root cause: site speed degraded after last theme publish (11:40 AM).
-                Mobile LCP increased by 1.4s.
               </div>
 
               {/* Action */}

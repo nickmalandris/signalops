@@ -24,6 +24,7 @@ export async function POST(req: NextRequest) {
       biggestProblem,
       openToCall,
       contactMethod,
+      partial,
     } = body;
 
     if (!name || !email || !storeUrl) {
@@ -33,7 +34,24 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    console.log("[Signup]", { name, email, storeUrl });
+    console.log(`[Signup] ${partial ? "Partial" : "Full"}`, { name, email, storeUrl });
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
+    // If partial, only notify owner, don't send confirmation to user yet
+    if (partial) {
+      try {
+        await resend.emails.send({
+          from: FROM,
+          to: OWNER_EMAIL,
+          subject: `[LEAD] New SignalOps Interest — ${name}`,
+          html: `<p>Captured partial lead from hero/first step:</p><p>Name: ${name}<br/>Email: ${email}<br/>Store: ${storeUrl}</p>`,
+        });
+      } catch (e) {
+        console.error("[Email] Partial lead notification failed", e);
+      }
+      return NextResponse.json({ success: true, partial: true });
+    }
 
     const row = (label: string, value: string | undefined) =>
       value
@@ -46,13 +64,11 @@ export async function POST(req: NextRequest) {
         ${row("Name", name)}
         ${row("Email", email)}
         ${row("Store URL", storeUrl)}
-        ${row("Metric keeping up / Other", [metric, metricOther].filter(Boolean).join(" — "))}
+        ${row("Metric", metric)}
         ${row("Alert channel", channel)}
-        ${row("Monthly revenue / Other", [revenue, revenueOther].filter(Boolean).join(" — "))}
-        ${row("Runs paid ads / Other", [paidAds, paidAdsOther].filter(Boolean).join(" — "))}
-        ${row("Top metric / Other", [topMetric, topMetricOther].filter(Boolean).join(" — "))}
+        ${row("Monthly revenue", revenue)}
+        ${row("Runs paid ads", paidAds)}
         ${row("Biggest problem", biggestProblem)}
-        ${row("Open to call / Contact method", [openToCall, contactMethod].filter(Boolean).join(" — "))}
         ${row("Analyst question", question)}
       </table>
     `;
@@ -70,7 +86,6 @@ export async function POST(req: NextRequest) {
       <p style="font-family:sans-serif;font-size:15px">— The SignalOps Team</p>
     `;
 
-    const resend = new Resend(process.env.RESEND_API_KEY);
     const [notifResult, confirmResult] = await Promise.allSettled([
       resend.emails.send({
         from: FROM,
@@ -92,7 +107,8 @@ export async function POST(req: NextRequest) {
       console.error("[Email] Confirmation failed:", confirmResult.reason);
 
     return NextResponse.json({ success: true });
-  } catch {
+  } catch (error) {
+    console.error("[Signup] API Error:", error);
     return NextResponse.json(
       { message: "Internal server error." },
       { status: 500 }
