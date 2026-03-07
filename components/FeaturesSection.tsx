@@ -1,27 +1,27 @@
 const features = [
   {
     symbol: "◉",
-    title: "The Analyst That Never Sleeps",
+    title: "Cross-Platform Intelligence",
     description:
-      "Your store runs 24/7. Now your analytics does too. SignalOps monitors performance continuously — including nights, weekends, and peak traffic moments when you're not watching.",
+      "SignalOps correlates data across Shopify, Meta, Google, and Klaviyo simultaneously. It surfaces connections a single-platform dashboard will never show — like a CPC spike caused by a site speed regression.",
   },
   {
     symbol: "⌁",
-    title: "High-Signal Alerts Only",
+    title: "Signal Precision, Not Volume",
     description:
-      "The system avoids alert fatigue by focusing exclusively on meaningful changes. You receive fewer alerts — but every single one is worth acting on.",
+      "The system is calibrated to fire only when the data is statistically meaningful. You receive fewer alerts than a typical monitoring tool — because noise is not a signal.",
   },
   {
     symbol: "→",
-    title: "Clear Recommended Actions",
+    title: "Context, Then Action",
     description:
-      "Every alert explains what happened, why it matters, and what to do next. No interpretation required. No expertise needed. Just a clear next step.",
+      "Every alert includes what happened, why it happened, and one specific next step. No interpretation required. The work of your analytics team, delivered as a single message.",
   },
   {
     symbol: "◻",
-    title: "No Dashboards Required",
+    title: "Zero Learning Curve",
     description:
-      "If you can read a message, you can use SignalOps. No logins, no charts, no learning curve. Just intelligence delivered to where you already work.",
+      "If you can read a text message, you can act on a SignalOps signal. No logins, no dashboards, no onboarding sessions. Intelligence delivered where your team already works.",
   },
 ];
 

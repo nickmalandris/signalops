@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const NAV_LINKS = [
-  { label: "Problem", href: "#problem" },
+  { label: "Why Signals", href: "#problem" },
   { label: "How It Works", href: "#how-it-works" },
   { label: "Features", href: "#features" },
 ];

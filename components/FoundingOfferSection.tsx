@@ -1,8 +1,9 @@
 const benefits = [
-  "Early access to the platform",
-  "Direct input into which alerts get built first",
-  "Founding pricing when the product launches",
+  "Early access before public launch",
+  "Direct input on which signals get built first",
+  "Founding pricing — locked in for life",
   "Personal onboarding with the founding team",
+  "A direct line to the product roadmap",
 ];
 
 export default function FoundingOfferSection() {
@@ -22,11 +23,11 @@ export default function FoundingOfferSection() {
             Become a Founding Partner
           </h2>
           <p className="text-base-content/50 leading-relaxed mb-10 text-sm">
-            We&apos;re inviting{" "}
-            <strong className="text-base-content">20 Shopify founders</strong>{" "}
-            to shape the first version of SignalOps. Founding partners help
-            decide which alerts get built first — and get exclusive access in
-            return.
+            We&apos;re working directly with{" "}
+            <strong className="text-base-content">20 Shopify operators</strong>{" "}
+            doing $20k+ monthly revenue to shape the first version of SignalOps.
+            Founding partners set the signal roadmap — and hold a pricing
+            advantage that won&apos;t be available at public launch.
           </p>
 
           {/* Benefits list */}
@@ -48,7 +49,7 @@ export default function FoundingOfferSection() {
             Apply for Founding Access
           </a>
           <p className="text-xs text-base-content/55 font-mono mt-4">
-            20 spots · No credit card required
+            20 spots · $20k+ MRR required · No credit card
           </p>
         </div>
       </div>
