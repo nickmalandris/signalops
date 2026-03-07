@@ -58,6 +58,20 @@ export default function RootLayout({
     <html lang="en" data-theme="signalops">
       <head>
         <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-Y3R609J00R"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-Y3R609J00R');
+            `,
+          }}
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
