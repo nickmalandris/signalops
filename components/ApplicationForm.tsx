@@ -53,9 +53,16 @@ export default function ApplicationForm() {
   const scrollToSection = () =>
     document.getElementById("apply")?.scrollIntoView({ behavior: "smooth", block: "start" });
 
+  const formatUrl = (url: string) => {
+    if (!url) return url;
+    return url.startsWith("http") ? url : `https://${url}`;
+  };
+
   const handleNext = async (e: React.FormEvent) => {
     e.preventDefault();
     scrollToSection();
+
+    const formattedForm = { ...form, storeUrl: formatUrl(form.storeUrl) };
 
     if (step === "contact") {
       // Capture lead early
@@ -65,7 +72,7 @@ export default function ApplicationForm() {
         await fetch("/api/signup", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ ...form, partial: true }),
+          body: JSON.stringify({ ...formattedForm, partial: true }),
         });
         setStep("profile");
       } catch (err) {
@@ -85,10 +92,11 @@ export default function ApplicationForm() {
     setLoading(true);
     setError(null);
     try {
+      const formattedForm = { ...form, storeUrl: formatUrl(form.storeUrl) };
       const res = await fetch("/api/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify(formattedForm),
       });
       if (!res.ok) {
         const data = await res.json();
@@ -180,11 +188,11 @@ export default function ApplicationForm() {
                   Shopify Store URL
                 </label>
                 <input
-                  type="url"
+                  type="text"
                   required
                   value={form.storeUrl}
                   onChange={(e) => set("storeUrl")(e.target.value)}
-                  placeholder="https://mystore.com"
+                  placeholder="mystore.com"
                   className="input input-bordered w-full bg-base-200 focus:border-primary focus:outline-none"
                 />
               </div>
