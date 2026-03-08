@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://www.signalops.io/sitemap.xml",
+    sitemap: "https://signalops-seven.vercel.app/sitemap.xml",
   };
 }

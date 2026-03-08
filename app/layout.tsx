@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
-const SITE_URL = "https://www.signalops.io";
+const SITE_URL = "https://signalops-seven.vercel.app";
 const TITLE = "SignalOps — AI Alerts That Tell Shopify Operators When to Act";
 const DESCRIPTION =
   "SignalOps monitors your Shopify and marketing data 24/7 and sends actionable alerts when something important happens. No dashboards. No noise. Just high-signal insights.";
